@@ -1,0 +1,20 @@
+<nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2">
+    <div class="flex h-16 items-center justify-between">
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex flex-shrink-0 items-center">
+          <h1 class="text-white">
+            {{ isLoggedIn ? 'ADMIN PANEL' : 'Default Page' }}
+          </h1>
+        </div>
+        <div class="ml-6 sm:block">
+          <div class="flex space-x-4">
+            <a *ngIf="isLoggedIn" (click)="logout()" class="cursor-pointer rounded-md bg-gray-700 px-3 py-2 text-sm font-medium text-white">
+              Logout
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

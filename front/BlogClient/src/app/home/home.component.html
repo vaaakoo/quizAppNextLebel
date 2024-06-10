@@ -1,0 +1,16 @@
+<div class="flex">
+    <div class="w-1/2">
+      <input type="text" [(ngModel)]="newQuestionText" placeholder="Enter question text" name="text">
+      <button (click)="addQuestion()">Add Question</button>
+    </div>
+    <div class="w-1/2">
+        <div *ngFor="let question of questions; let i = index">
+          <input type="text" [(ngModel)]="questions[i].text" class="border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+          <button (click)="updateQuestionText(i)">Save</button>
+        </div>
+      </div>
+      
+      
+      
+  </div>
+  
